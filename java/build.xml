@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name="cliffeh-util" default="jar" basedir=".">
+
+  <!-- global properties for this build -->
+  <property name="src.dir" value="src"/>
+  <property name="build.dir" value="build"/>
+  <property name="jarname" value="cliffeh-util.jar"/>
+  <property name="doc.dir" value="doc"/>
+
+  <target name="init" description="creates the necessary build directories">
+    <mkdir dir="${build.dir}"/>
+  </target>
+
+  <target name="compile" depends="init" description="compiles the classes">
+    <javac debug="true" srcdir="${src.dir}" destdir="${build.dir}" />
+  </target>
+
+  <target name="jar" depends="compile" description="builds a jarfile of the compiled classes">
+    <jar jarfile="${jarname}" basedir="${build.dir}/"/>
+  </target>
+
+  <target name="doc" depends="compile" description="generates javadoc for the classes">
+    <javadoc packagenames="com.cliftonsnyder.util.*" sourcepath="${build.dir}" defaultexcludes="yes" destdir="${doc}/apidoc" author="true" version="true" use="true" windowtitle="cliffeh-util Documentation Version: ${version}"/>
+  </target>
+
+  <target name="clean" description="removes all intermediate files and directories">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <target name="veryclean" depends="clean" description="removes intermediate files, directories, and jar file(s)">
+    <delete file="${jarname}"/>
+  </target> 
+  
+</project>
