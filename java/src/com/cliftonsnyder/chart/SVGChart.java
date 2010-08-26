@@ -95,7 +95,7 @@ public class SVGChart extends Chart {
 		return css;
 	}
 
-	private String generateJS() {
+	private String generateJS() {// TODO make this better! lulz
 		String js = "";
 		js += "var mo = null;" + "\n";
 		js += "var moClass = null;" + "\n";
