@@ -1,8 +1,6 @@
 package com.cliftonsnyder.chart;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,10 +12,14 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
-public class SVGChart extends Chart {
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.GnuParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
 
-	public static final String USAGE = "usage: java "
-			+ SVGChart.class.getCanonicalName() + " [infile]";
+public class SVGChart extends Chart {
 
 	public static final String SVG_11_DTD = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">";
 
@@ -30,22 +32,53 @@ public class SVGChart extends Chart {
 	 */
 	public static void main(String[] args) {
 
-		InputStream in = null;
+		// TODO determine what to use as input with args!
+		InputStream in = System.in;
 
-		// TODO better argument use
-		if (args.length > 1) {
-			System.err.println(USAGE);
+		Options options = new Options();
+
+		options.addOption("gw", "width", true,
+				"the width of the graph to be created [default: 640]");
+		options.addOption("gh", "height", true,
+				"the height of the graph to be created [default: 480]");
+		options.addOption("h", "help", false, "print a brief help message");
+		options.addOption("i", "infile", true,
+				"the input file to use [default: stdin]");
+		options.addOption("o", "outfile", true,
+				"the output file to use [default: stdout]");
+		options.addOption("s", "step", true,
+				"the time period (in seconds) to use [default: 300]");
+
+		CommandLine cli = null;
+		CommandLineParser parser = new GnuParser();
+		try {
+			cli = parser.parse(options, args);
+		} catch (ParseException e) {
+			System.err.println("error: " + e.getMessage());
+			HelpFormatter formatter = new HelpFormatter();
+			formatter.printHelp("svgchart", options);
 			System.exit(1);
-		} else if (args.length == 1) {
-			try {
-				in = new FileInputStream(args[0]);
-			} catch (FileNotFoundException e) {
-				System.err.println("error: file '" + args[0] + "' not found");
-				System.exit(1);
-			}
-		} else if (args.length == 0) {
-			in = System.in;
 		}
+
+		if (cli.hasOption("h")) {
+			HelpFormatter formatter = new HelpFormatter();
+			formatter.printHelp("svgchart", options, true);
+			System.exit(0);
+		}
+
+		// if (args.length > 1) {
+		// System.err.println(USAGE);
+		// System.exit(1);
+		// } else if (args.length == 1) {
+		// try {
+		// in = new FileInputStream(args[0]);
+		// } catch (FileNotFoundException e) {
+		// System.err.println("error: file '" + args[0] + "' not found");
+		// System.exit(1);
+		// }
+		// } else if (args.length == 0) {
+		// in = System.in;
+		// }
 
 		// TODO implement a load(InputStream) method in Chart
 		BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -84,12 +117,13 @@ public class SVGChart extends Chart {
 
 	private String generateCSS() {
 		String css = "";
+		String NL = "\n"; // TODO replace with ""?
 
-		css += "#canvas {}" + "\n";
-		css += ".bg { stroke: black; fill: white; stroke-width: 1; }" + "\n";
+		css += "#canvas {}" + NL;
+		css += ".bg { stroke: black; fill: white; stroke-width: 1; }" + NL;
 		for (int i = 0; i < colors.length; i++) {
 			css += ".ds" + i + " { stroke: " + colors[i] + "; fill: "
-					+ colors[i] + "; }" + "\n";
+					+ colors[i] + "; }" + NL;
 		}
 
 		return css;
@@ -97,14 +131,18 @@ public class SVGChart extends Chart {
 
 	private String generateJS() {// TODO make this better! lulz
 		String js = "";
-		js += "var mo = null;" + "\n";
-		js += "var moClass = null;" + "\n";
-		js += "function announce(evt){" + "\n";
-		js += "if(mo) mo.setAttributeNS(null, 'class', moClass);" + "\n";
-		js += "mo = evt.target;" + "\n";
-		js += "moClass = mo.getAttributeNS(null, 'class');" + "\n";
-		js += "mo.setAttributeNS(null, 'class', 'ds0');" + "\n";
-		js += "}" + "\n";
+		String NL = "\n"; // TODO replace with ""?
+
+		js += "var mo = null;" + NL;
+		js += "var moClass = null;" + NL;
+		js += "function announce(evt){" + NL;
+		js += "if(mo) mo.setAttributeNS(null, 'class', moClass);" + NL;
+		js += "mo = evt.target;" + NL;
+		js += "moClass = mo.getAttributeNS(null, 'class');" + NL;
+		js += "mo.setAttributeNS(null, 'class', 'ds0');" + NL;
+		js += "document.getElementById('ann').appendChild(document.createTextNode('yourText'))";
+		js += "}" + NL;
+
 		return js;
 	}
 
@@ -149,6 +187,21 @@ public class SVGChart extends Chart {
 			writer.writeAttribute("y", "" + 1);
 			writer.writeAttribute("width", "" + (width - 1));
 			writer.writeAttribute("height", "" + (height - 1));
+
+			// text box for announce()
+			writer.writeEmptyElement("rect");
+			writer.writeAttribute("x", "" + 1);
+			writer.writeAttribute("y", "" + 1);
+			writer.writeAttribute("width", "" + 50);
+			writer.writeAttribute("height", "" + 50);
+			// TODO put this in the CSS
+			writer.writeAttribute("style", "fill:white");
+
+			// text element 'ann' for announce()
+			writer.writeEmptyElement("text");
+			writer.writeAttribute("id", "ann");
+			writer.writeAttribute("x", "" + 5);
+			writer.writeAttribute("y", "" + 15);
 
 			float w = xScale;
 

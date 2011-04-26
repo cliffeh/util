@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="358" height="307"> <!-- 7:6 ratio, plus 1px borders -->
+<style type="text/css"><![CDATA[
+line { stroke: black; stroke-width: 1px; }
+]]></style>
+  <g name="canvas">
+    <!-- calendar grid consists of 8 vertical lines and 7 horizontal lines -->
+
+    <!-- 8 verticals, spaced 50px apart -->
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+    <line x1="1" x2="1" y1="0" y2="307" />
+
+    <!-- 7 horizontals, spaced 50px apart -->
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+    <line x1="0" x2="358" y1="1" y2="1" />
+  </g>
+</svg>

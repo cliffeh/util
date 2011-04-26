@@ -1,0 +1,246 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+	  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+ 
+<svg width="1024" height="768" version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css"><![CDATA[ 
+    .hour { 
+      fill: none; 
+      stroke: black; 
+      stroke-width: 0.25;
+      opacity: 0.5;
+    }
+    
+    .sleep {
+      fill: blue;
+    }
+    
+    .raid {
+      fill: green;
+    }
+    
+  ]]></style>
+  
+  <defs>
+    <symbol id="hhRect">
+      <rect x="0" y="0" height="15" width="141" />
+    </symbol>
+  </defs>
+  
+  <!-- daily width = 141 -->
+  <!-- half-hour height = 15 -->
+  
+  <g id="sunday" transform="translate(36 0)">
+      <use xlink:href="#hhRect" class="hour" y="24" />
+      <use xlink:href="#hhRect" class="hour" y="39" />
+      <use xlink:href="#hhRect" class="hour" y="54" />
+      <use xlink:href="#hhRect" class="hour" y="69" />
+      <use xlink:href="#hhRect" class="hour" y="84" />
+      <use xlink:href="#hhRect" class="hour" y="99" />
+      <use xlink:href="#hhRect" class="hour" y="114" />
+      <use xlink:href="#hhRect" class="hour" y="129" />
+      <use xlink:href="#hhRect" class="hour" y="144" />
+      <use xlink:href="#hhRect" class="hour" y="159" />
+      <use xlink:href="#hhRect" class="hour" y="174" />
+      <use xlink:href="#hhRect" class="hour" y="189" />
+      <use xlink:href="#hhRect" class="hour" y="204" />
+      <use xlink:href="#hhRect" class="hour" y="219" />
+      <use xlink:href="#hhRect" class="hour" y="234" />
+      <use xlink:href="#hhRect" class="hour" y="249" />
+      <use xlink:href="#hhRect" class="hour" y="264" />
+      <use xlink:href="#hhRect" class="hour" y="279" />
+      <use xlink:href="#hhRect" class="hour" y="294" />
+      <use xlink:href="#hhRect" class="hour" y="309" />
+      <use xlink:href="#hhRect" class="hour" y="324" />
+      <use xlink:href="#hhRect" class="hour" y="339" />
+      <use xlink:href="#hhRect" class="hour" y="354" />
+      <use xlink:href="#hhRect" class="hour" y="369" />
+      <use xlink:href="#hhRect" class="hour" y="384" />
+      <use xlink:href="#hhRect" class="hour" y="399" />
+      <use xlink:href="#hhRect" class="hour" y="414" />
+      <use xlink:href="#hhRect" class="hour" y="429" />
+      <use xlink:href="#hhRect" class="hour" y="444" />
+      <use xlink:href="#hhRect" class="hour" y="459" />
+      <use xlink:href="#hhRect" class="hour" y="474" />
+      <use xlink:href="#hhRect" class="hour" y="489" />
+      <use xlink:href="#hhRect" class="hour" y="504" />
+      <use xlink:href="#hhRect" class="hour" y="519" />
+      <use xlink:href="#hhRect" class="hour" y="534" />
+      <use xlink:href="#hhRect" class="hour" y="549" />
+      <use xlink:href="#hhRect" class="hour" y="564" />
+      <use xlink:href="#hhRect" class="hour" y="579" />
+      <use xlink:href="#hhRect" class="hour" y="594" />
+      <use xlink:href="#hhRect" class="hour" y="609" />
+      <use xlink:href="#hhRect" class="hour" y="624" />
+      <use xlink:href="#hhRect" class="hour" y="639" />
+      <use xlink:href="#hhRect" class="hour" y="654" />
+      <use xlink:href="#hhRect" class="hour" y="669" />
+      <use xlink:href="#hhRect" class="hour" y="684" />
+      <use xlink:href="#hhRect" class="hour" y="699" />
+      <use xlink:href="#hhRect" class="hour" y="714" />
+      <use xlink:href="#hhRect" class="hour" y="729" />
+  </g>
+  
+  <g id="monday">
+      <rect class="hour" x="177" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="177" y="54" height="31" width="141" /> 
+      <rect class="hour" x="177" y="85" height="31" width="141" />
+      <rect class="hour" x="177" y="116" height="31" width="141" />
+      <rect class="hour" x="177" y="147" height="31" width="141" />
+      <rect class="hour" x="177" y="178" height="31" width="141" />
+      <rect class="hour" x="177" y="209" height="31" width="141" />
+      <rect class="hour" x="177" y="240" height="31" width="141" />
+      <rect class="hour" x="177" y="271" height="31" width="141" />
+      <rect class="hour" x="177" y="302" height="31" width="141" />
+      <rect class="hour" x="177" y="333" height="31" width="141" />
+      <rect class="hour" x="177" y="364" height="31" width="141" />
+      <rect class="hour" x="177" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="177" y="426" height="31" width="141" />
+      <rect class="hour" x="177" y="457" height="31" width="141" />
+      <rect class="hour" x="177" y="488" height="31" width="141" />
+      <rect class="hour" x="177" y="519" height="31" width="141" />
+      <rect class="hour" x="177" y="550" height="31" width="141" />
+      <rect class="hour" x="177" y="581" height="31" width="141" />
+      <rect class="hour" x="177" y="612" height="31" width="141" />
+      <rect class="hour" x="177" y="643" height="31" width="141" />
+      <rect class="hour" x="177" y="674" height="31" width="141" />
+      <rect class="hour" x="177" y="705" height="31" width="141" />
+      <rect class="hour" x="177" y="736" height="31" width="141" />
+  </g>    
+  
+  <g id="tuesday">
+      <rect class="hour" x="318" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="318" y="54" height="31" width="141" /> 
+      <rect class="hour" x="318" y="85" height="31" width="141" />
+      <rect class="hour" x="318" y="116" height="31" width="141" />
+      <rect class="hour" x="318" y="147" height="31" width="141" />
+      <rect class="hour" x="318" y="178" height="31" width="141" />
+      <rect class="hour" x="318" y="209" height="31" width="141" />
+      <rect class="hour" x="318" y="240" height="31" width="141" />
+      <rect class="hour" x="318" y="271" height="31" width="141" />
+      <rect class="hour" x="318" y="302" height="31" width="141" />
+      <rect class="hour" x="318" y="333" height="31" width="141" />
+      <rect class="hour" x="318" y="364" height="31" width="141" />
+      <rect class="hour" x="318" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="318" y="426" height="31" width="141" />
+      <rect class="hour" x="318" y="457" height="31" width="141" />
+      <rect class="hour" x="318" y="488" height="31" width="141" />
+      <rect class="hour" x="318" y="519" height="31" width="141" />
+      <rect class="hour" x="318" y="550" height="31" width="141" />
+      <rect class="hour" x="318" y="581" height="31" width="141" />
+      <rect class="hour" x="318" y="612" height="31" width="141" />
+      <rect class="hour" x="318" y="643" height="31" width="141" />
+      <rect class="hour" x="318" y="674" height="31" width="141" />
+      <rect class="hour" x="318" y="705" height="31" width="141" />
+      <rect class="hour" x="318" y="736" height="31" width="141" />
+  </g>    
+  
+  <g id="wednesday">    
+      <rect class="hour raid" x="459" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="459" y="54" height="31" width="141" /> 
+      <rect class="hour" x="459" y="85" height="31" width="141" />
+      <rect class="hour" x="459" y="116" height="31" width="141" />
+      <rect class="hour" x="459" y="147" height="31" width="141" />
+      <rect class="hour" x="459" y="178" height="31" width="141" />
+      <rect class="hour" x="459" y="209" height="31" width="141" />
+      <rect class="hour" x="459" y="240" height="31" width="141" />
+      <rect class="hour" x="459" y="271" height="31" width="141" />
+      <rect class="hour" x="459" y="302" height="31" width="141" />
+      <rect class="hour" x="459" y="333" height="31" width="141" />
+      <rect class="hour" x="459" y="364" height="31" width="141" />
+      <rect class="hour" x="459" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="459" y="426" height="31" width="141" />
+      <rect class="hour" x="459" y="457" height="31" width="141" />
+      <rect class="hour" x="459" y="488" height="31" width="141" />
+      <rect class="hour" x="459" y="519" height="31" width="141" />
+      <rect class="hour" x="459" y="550" height="31" width="141" />
+      <rect class="hour" x="459" y="581" height="31" width="141" />
+      <rect class="hour" x="459" y="612" height="31" width="141" />
+      <rect class="hour" x="459" y="643" height="31" width="141" />
+      <rect class="hour" x="459" y="674" height="31" width="141" />
+      <rect class="hour" x="459" y="705" height="31" width="141" />
+      <rect class="hour" x="459" y="736" height="31" width="141" />
+  </g>    
+  
+  <g id="thursday">    
+      <rect class="hour" x="600" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="600" y="54" height="31" width="141" /> 
+      <rect class="hour" x="600" y="85" height="31" width="141" />
+      <rect class="hour" x="600" y="116" height="31" width="141" />
+      <rect class="hour" x="600" y="147" height="31" width="141" />
+      <rect class="hour" x="600" y="178" height="31" width="141" />
+      <rect class="hour" x="600" y="209" height="31" width="141" />
+      <rect class="hour" x="600" y="240" height="31" width="141" />
+      <rect class="hour" x="600" y="271" height="31" width="141" />
+      <rect class="hour" x="600" y="302" height="31" width="141" />
+      <rect class="hour" x="600" y="333" height="31" width="141" />
+      <rect class="hour" x="600" y="364" height="31" width="141" />
+      <rect class="hour" x="600" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="600" y="426" height="31" width="141" />
+      <rect class="hour" x="600" y="457" height="31" width="141" />
+      <rect class="hour" x="600" y="488" height="31" width="141" />
+      <rect class="hour" x="600" y="519" height="31" width="141" />
+      <rect class="hour" x="600" y="550" height="31" width="141" />
+      <rect class="hour" x="600" y="581" height="31" width="141" />
+      <rect class="hour" x="600" y="612" height="31" width="141" />
+      <rect class="hour" x="600" y="643" height="31" width="141" />
+      <rect class="hour" x="600" y="674" height="31" width="141" />
+      <rect class="hour" x="600" y="705" height="31" width="141" />
+      <rect class="hour" x="600" y="736" height="31" width="141" />
+  </g>    
+  
+  <g id="friday">    
+      <rect class="hour" x="741" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="741" y="54" height="31" width="141" /> 
+      <rect class="hour" x="741" y="85" height="31" width="141" />
+      <rect class="hour" x="741" y="116" height="31" width="141" />
+      <rect class="hour" x="741" y="147" height="31" width="141" />
+      <rect class="hour" x="741" y="178" height="31" width="141" />
+      <rect class="hour" x="741" y="209" height="31" width="141" />
+      <rect class="hour" x="741" y="240" height="31" width="141" />
+      <rect class="hour" x="741" y="271" height="31" width="141" />
+      <rect class="hour" x="741" y="302" height="31" width="141" />
+      <rect class="hour" x="741" y="333" height="31" width="141" />
+      <rect class="hour" x="741" y="364" height="31" width="141" />
+      <rect class="hour" x="741" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="741" y="426" height="31" width="141" />
+      <rect class="hour" x="741" y="457" height="31" width="141" />
+      <rect class="hour" x="741" y="488" height="31" width="141" />
+      <rect class="hour" x="741" y="519" height="31" width="141" />
+      <rect class="hour" x="741" y="550" height="31" width="141" />
+      <rect class="hour" x="741" y="581" height="31" width="141" />
+      <rect class="hour" x="741" y="612" height="31" width="141" />
+      <rect class="hour" x="741" y="643" height="31" width="141" />
+      <rect class="hour" x="741" y="674" height="31" width="141" />
+      <rect class="hour" x="741" y="705" height="31" width="141" />
+      <rect class="hour" x="741" y="736" height="31" width="141" />
+  </g>    
+  
+  <g id="saturday">    
+      <rect class="hour" x="882" y="23" height="31" width="141" /> <!-- midnight -->
+      <rect class="hour" x="882" y="54" height="31" width="141" /> 
+      <rect class="hour" x="882" y="85" height="31" width="141" />
+      <rect class="hour" x="882" y="116" height="31" width="141" />
+      <rect class="hour" x="882" y="147" height="31" width="141" />
+      <rect class="hour" x="882" y="178" height="31" width="141" />
+      <rect class="hour" x="882" y="209" height="31" width="141" />
+      <rect class="hour" x="882" y="240" height="31" width="141" />
+      <rect class="hour" x="882" y="271" height="31" width="141" />
+      <rect class="hour" x="882" y="302" height="31" width="141" />
+      <rect class="hour" x="882" y="333" height="31" width="141" />
+      <rect class="hour" x="882" y="364" height="31" width="141" />
+      <rect class="hour" x="882" y="395" height="31" width="141" /> <!-- noon -->
+      <rect class="hour" x="882" y="426" height="31" width="141" />
+      <rect class="hour" x="882" y="457" height="31" width="141" />
+      <rect class="hour" x="882" y="488" height="31" width="141" />
+      <rect class="hour" x="882" y="519" height="31" width="141" />
+      <rect class="hour" x="882" y="550" height="31" width="141" />
+      <rect class="hour" x="882" y="581" height="31" width="141" />
+      <rect class="hour" x="882" y="612" height="31" width="141" />
+      <rect class="hour" x="882" y="643" height="31" width="141" />
+      <rect class="hour" x="882" y="674" height="31" width="141" />
+      <rect class="hour" x="882" y="705" height="31" width="141" />
+      <rect class="hour" x="882" y="736" height="31" width="141" />
+  </g>
+</svg>

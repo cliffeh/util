@@ -1,0 +1,2 @@
+* think about how to separate the data from the representation without
+  too cumbersome a class hierarchy

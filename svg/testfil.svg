@@ -1,0 +1,424 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+          "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="1024" height="768" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css"><![CDATA[
+    .hour {
+      fill: none;
+      stroke: none; /* black; */
+      /* stroke-width: 0.25; */
+      opacity: 0.5;
+    }
+
+    .sleep {
+      fill: blue;
+    }
+
+    .raid {
+      fill: green;
+    }
+
+    .work {
+      fill: red;
+    }
+
+  ]]></style>
+
+  <defs>
+    <symbol id="hhRect">
+      <rect x="0" y="0" height="15" width="141" />
+    </symbol>
+  </defs>
+
+  <!-- daily width = 141 -->
+  <!-- half-hour height = 15 -->
+
+  <g id="time_labels">
+    <text style="font-size:15px" x="2" y="29">00:00</text>
+    <text style="font-size:15px" x="2" y="59">01:00</text>
+    <text style="font-size:15px" x="2" y="89">02:00</text>
+    <text style="font-size:15px" x="2" y="119">03:00</text>
+    <text style="font-size:15px" x="2" y="149">04:00</text>
+    <text style="font-size:15px" x="2" y="179">05:00</text>
+    <text style="font-size:15px" x="2" y="209">06:00</text>
+    <text style="font-size:15px" x="2" y="239">07:00</text>
+    <text style="font-size:15px" x="2" y="269">08:00</text>
+    <text style="font-size:15px" x="2" y="299">09:00</text>
+    <text style="font-size:15px" x="2" y="329">10:00</text>
+    <text style="font-size:15px" x="2" y="359">11:00</text>
+    <text style="font-size:15px" x="2" y="389">12:00</text>
+    <text style="font-size:15px" x="2" y="419">13:00</text>
+    <text style="font-size:15px" x="2" y="449">14:00</text>
+    <text style="font-size:15px" x="2" y="479">15:00</text>
+    <text style="font-size:15px" x="2" y="509">16:00</text>
+    <text style="font-size:15px" x="2" y="539">17:00</text>
+    <text style="font-size:15px" x="2" y="569">18:00</text>
+    <text style="font-size:15px" x="2" y="599">19:00</text>
+    <text style="font-size:15px" x="2" y="629">20:00</text>
+    <text style="font-size:15px" x="2" y="659">21:00</text>
+    <text style="font-size:15px" x="2" y="689">22:00</text>
+    <text style="font-size:15px" x="2" y="719">23:00</text>
+  </g>
+
+  <g id="day_labels">
+    <text y="24" x="40">Sunday</text>
+    <text y="24" x="181">Monday</text>
+    <text y="24" x="322">Tuesday</text>
+    <text y="24" x="463">Wednesday</text>
+    <text y="24" x="604">Thursday</text>
+    <text y="24" x="745">Friday</text>
+    <text y="24" x="886">Saturday</text>
+  </g>
+  <g id="sunday" transform="translate(36 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="monday" transform="translate(177 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="tuesday" transform="translate(318 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="wednesday" transform="translate(459 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="thursday" transform="translate(600 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="friday" transform="translate(741 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+  <g id="saturday" transform="translate(882 24)">
+      <use xlink:href="#hhRect" class="hour" y="0" />
+      <use xlink:href="#hhRect" class="hour" y="15" />
+      <use xlink:href="#hhRect" class="hour" y="30" />
+      <use xlink:href="#hhRect" class="hour" y="45" />
+      <use xlink:href="#hhRect" class="hour" y="60" />
+      <use xlink:href="#hhRect" class="hour" y="75" />
+      <use xlink:href="#hhRect" class="hour" y="90" />
+      <use xlink:href="#hhRect" class="hour" y="105" />
+      <use xlink:href="#hhRect" class="hour" y="120" />
+      <use xlink:href="#hhRect" class="hour" y="135" />
+      <use xlink:href="#hhRect" class="hour" y="150" />
+      <use xlink:href="#hhRect" class="hour" y="165" />
+      <use xlink:href="#hhRect" class="hour" y="180" />
+      <use xlink:href="#hhRect" class="hour" y="195" />
+      <use xlink:href="#hhRect" class="hour" y="210" />
+      <use xlink:href="#hhRect" class="hour" y="225" />
+      <use xlink:href="#hhRect" class="hour" y="240" />
+      <use xlink:href="#hhRect" class="hour" y="255" />
+      <use xlink:href="#hhRect" class="hour" y="270" />
+      <use xlink:href="#hhRect" class="hour" y="285" />
+      <use xlink:href="#hhRect" class="hour" y="300" />
+      <use xlink:href="#hhRect" class="hour" y="315" />
+      <use xlink:href="#hhRect" class="hour" y="330" />
+      <use xlink:href="#hhRect" class="hour" y="345" />
+      <use xlink:href="#hhRect" class="hour" y="360" />
+      <use xlink:href="#hhRect" class="hour" y="375" />
+      <use xlink:href="#hhRect" class="hour" y="390" />
+      <use xlink:href="#hhRect" class="hour" y="405" />
+      <use xlink:href="#hhRect" class="hour" y="420" />
+      <use xlink:href="#hhRect" class="hour" y="435" />
+      <use xlink:href="#hhRect" class="hour" y="450" />
+      <use xlink:href="#hhRect" class="hour" y="465" />
+      <use xlink:href="#hhRect" class="hour" y="480" />
+      <use xlink:href="#hhRect" class="hour" y="495" />
+      <use xlink:href="#hhRect" class="hour" y="510" />
+      <use xlink:href="#hhRect" class="hour" y="525" />
+      <use xlink:href="#hhRect" class="hour" y="540" />
+      <use xlink:href="#hhRect" class="hour" y="555" />
+      <use xlink:href="#hhRect" class="hour" y="570" />
+      <use xlink:href="#hhRect" class="hour" y="585" />
+      <use xlink:href="#hhRect" class="hour" y="600" />
+      <use xlink:href="#hhRect" class="hour" y="615" />
+      <use xlink:href="#hhRect" class="hour" y="630" />
+      <use xlink:href="#hhRect" class="hour" y="645" />
+      <use xlink:href="#hhRect" class="hour" y="660" />
+      <use xlink:href="#hhRect" class="hour" y="675" />
+      <use xlink:href="#hhRect" class="hour" y="690" />
+      <use xlink:href="#hhRect" class="hour" y="705" />
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+# we'll take note of where we are
+e=`readlink -f ${0}`
+basedir=`dirname ${e}`/..
+
+CLASSPATH=${basedir}/build:${basedir}/lib/commons-cli-1.2.jar
+MAIN=com.cliftonsnyder.chart.SVGChart
+
+java -cp ${CLASSPATH} ${MAIN} $@
