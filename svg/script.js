@@ -52,8 +52,8 @@ function drawGraph(){
     line.setAttributeNS(null, "y2", yScale(ydata[i]));
     canvas.appendChild(line);
     */
-    Line line = new Line((i-1)*step, i*step, yScale(ydata[i-1]), yScale(ydata[i]));
-    line.display();
+    var line = new Line((i-1)*step, i*step, yScale(ydata[i-1]), yScale(ydata[i]));
+    line.display(canvas);
   }
 
   xp.push(i*step);
@@ -102,7 +102,7 @@ function Line(x1, x2, y1, y2)
 
     // y = mx + b
     this.m = (y2-y1)/(x2-x1);
-    this.b = y1 - (m*x1);
+    this.b = y1 - (this.m*x1);
 
     // DOM element
     this._line = document.createElementNS(svgNS, "line");
@@ -113,7 +113,9 @@ function Line(x1, x2, y1, y2)
     // TODO support different styles
     this._line.setAttributeNS(null, "style", "stroke:black");
 
-    function display(canvas){
-	canvas.appendChild(this._line);
-    }
 }
+
+Line.prototype.display = function(canvas){
+    canvas.appendChild(this._line);
+}
+
