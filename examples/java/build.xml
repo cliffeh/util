@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<project name="java-examples" default="jar" basedir=".">
+	<description>
+		Sample Ant build.xml
+	</description>
+	
+	<!-- define a properties file for customization -->
+	<property file="build.properties"/>
+
+	<!-- default properties -->
+	<property name="src.dir" value="src"/>
+	<property name="lib.dir" value="lib"/>
+	<property name="build.dir" value="build"/>
+	<property name="jar.name" value="${project.name}.jar"/>
+	<property name="doc.dir" value="doc"/>
+	<property name="apidoc.dir" value="${doc.dir}/api"/>
+	<property name="dist.dir" value="dist"/>
+
+	<!-- begin targets -->
+	
+	
+	<!-- initialize for build -->
+	<target name="init" description="prepares a directory structure for a build">
+		<mkdir dir="${build.dir}"/>
+        <!-- copy all Java files from ${src.dir} to ${build.dir}  -->
+		<copy todir="${build.dir}/">
+			<fileset dir="${src.dir}" includes="**/*.java"/>
+            <!-- apply a substitution @version@ with the value of ${version} -->
+			<filterset>
+				<filter token="version" value="${version}"/>
+			</filterset>
+		</copy>
+	</target>
+	
+	<!-- compile classes -->
+	<target name="compile" depends="init" description="compiles class files">
+		<javac debug="true" srcdir="${build.dir}" destdir="${build.dir}">
+			<classpath>
+                <!-- use the value of the ${classpath} property in the classpath -->
+				<pathelement path="${classpath}"/>
+                <!-- include necessary libraries -->
+				<fileset dir="${lib.dir}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+	
+	<!-- create a jarfile -->
+	<target name="clutch" depends="compile" description="builds a jarfile of the compiled classes">
+		<jar jarfile="${jar.name}" basedir="${build.dir}/"/>
+	</target>
+	
+
+	<!-- end targets -->
+</project>
