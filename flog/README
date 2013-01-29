@@ -1,0 +1,84 @@
+flog - a simple C logging library
+
+What is flog?
+------------------------------------------------------------------------
+If your C source code sprinkled with lines like the following:
+
+  if(debug)
+    fprintf(stderr, "program: debug: invalid filename '%s'\n", filename); 
+
+...then you may be interested in flog. flog provides two things:
+
+  1) a small, fixed number of sane log levels, and
+  2) a handful of convenient functions for outputting log messages
+     given a particular log level
+
+How do I use it?
+------------------------------------------------------------------------
+Below is a simple example:
+
+---
+#include <stdlib.h>
+#include "flog.h"
+
+int main(int argc, char *argv)
+{
+  char *filename = "foo";
+
+  // initialize flog to only output errors
+  flog_init(stdout, stderr, "program", F_LOG_ANY_ERROR);
+
+  // the below two calls are equivalent
+  flog(F_WARN, "%s does not exist!", filename);
+  flog_warn("%s does not exist!", filename);
+
+  // this call won't output anything since we're only interested
+  // inloggingerrors (see: flog_init())
+  flog_debug("%s needs to be created before we can use it");
+
+  exit(0);
+}
+---
+
+The above code will generate the following output:
+
+  program: warn: foo does not exist!
+  program: warn: foo does not exist!
+
+It will *not* generate any output from the call to flog_debug as
+flog_init specified that only errors should be logged. The flags
+provided are: F_FATAL, F_ERROR, F_WARN, F_INFO, F_VERBOSE, F_DEBUG.
+
+The flog log level can be defined by any bitwise OR of these flags.
+For example, if you only wanted to log fatal errors and debugging
+messages, you could specify (F_FATAL|F_DEBUG).
+
+There are also a handful of convenience ORs provided: 
+
+  F_LOG_QUIET     (F_FATAL|F_ERROR)
+  F_LOG_ANY_ERROR (F_FATAL|F_ERROR|F_WARN)
+  F_LOG_INFORM    (F_FATAL|F_ERROR|F_WARN|F_INFO)
+  F_LOG_VERBOSE   (F_FATAL|F_ERROR|F_WARN|F_INFO|F_VERBOSE)
+  F_LOG_ALL       (F_FATAL|F_ERROR|F_WARN|F_INFO|F_VERBOSE|F_DEBUG)
+  F_LOG_DEFAULT   F_LOG_ANY_ERROR
+
+Finally, you can either use:
+
+  flog(int level, const char *fmt, ...)
+
+...or any of the convenience macros provided for each respective flag:
+
+  flog_fatal(fmt, ...)   
+  flog_error(fmt, ...)   
+  flog_warn(fmt, ...)    
+  flog_info(fmt, ...)    
+  flog_verbose(fmt, ...) 
+  flog_debug(fmt, ...)   
+
+Compiling
+------------------------------------------------------------------------
+A simple Makefile is provided that generates the object file flog.o. For
+a single file it doesn't seem necessary to generate a library, but this
+may be done in the future. For now, the following will suffice:
+
+  gcc -o flog.o flog.c
