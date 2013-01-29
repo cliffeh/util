@@ -5,3 +5,5 @@ flog.c: flog.h
 
 clean:
 	rm -f flog.o
+
+veryclean: clean

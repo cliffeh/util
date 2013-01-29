@@ -33,7 +33,7 @@ int main(int argc, char *argv)
   flog_warn("%s does not exist!", filename);
 
   // this call won't output anything since we're only interested
-  // inloggingerrors (see: flog_init())
+  // in logging errors (see: flog_init())
   flog_debug("%s needs to be created before we can use it");
 
   exit(0);
