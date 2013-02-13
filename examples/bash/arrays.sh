@@ -6,6 +6,12 @@
 # create an array
 array=("a" "b" "c")
 
+# append elements to an array
+foo="this is a string"
+bar="this is another string"
+array+=("${foo}")
+array+=("${bar}")
+
 # read an array from a file (/etc/hosts)
 array=(`tr '\n' ' ' < /etc/hosts`)
 
