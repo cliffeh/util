@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# -*- coding: undecided -*-
 
 "Cliffy"
 "Cliffy".reverse # => "yffilC"
@@ -7,3 +8,8 @@
 
 # to_s (to-string method)
 40.to_s.reverse  # => 04
+
+line = "cliff: http://thingly.net"
+name, url = line.split(': ')
+url = url.strip # strip leading/trailing whitespace
+
