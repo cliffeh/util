@@ -3,3 +3,6 @@
 .project
 .settings
 target
+
+# goddam emacs backup files
+*~
