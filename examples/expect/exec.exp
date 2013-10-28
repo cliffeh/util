@@ -1,0 +1,4 @@
+#!/usr/bin/expect
+
+puts "The date: [exec date]"
+puts "--- Directory listing ---\n[exec ls]\n---"

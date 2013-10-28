@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+
+set argc [llength $argv]
+
+for {set i 0} {$i < $argc} {incr i} {
+    set arg [lindex $argv $i]
+    puts "Argument $i: $arg"
+}

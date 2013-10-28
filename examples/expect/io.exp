@@ -1,0 +1,5 @@
+#!/usr/bin/expect
+
+while {[gets stdin line] != -1} {
+    puts $line
+}

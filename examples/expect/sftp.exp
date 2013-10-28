@@ -1,0 +1,41 @@
+#!/usr/bin/expect
+# 
+# sftp.exp - sftp one or more files to a remote location
+#
+
+set usage "usage: sftp.exp hostname password remotedir FILES"
+set argc [llength $argv]
+
+if { $argc < 4 } {
+    puts stderr "error: incorrect number of arguments"
+    puts stderr $usage
+    exit 1
+}
+
+set hostname [lindex $argv 0]
+set password [lindex $argv 1]
+set remotedir [lindex $argv 2]
+
+spawn sftp $hostname
+
+# known_hosts prompt (if first time)
+set timeout 1
+expect "(yes/no)?" {send "yes\r"}
+
+# password prompt
+set timeout 10
+expect "assword:"
+send "$password\r"
+
+# change dirs
+expect "sftp>" { send "cd $remotedir\r" }
+
+for { set i 3 } { $i < $argc } { incr i } {
+    set filename [lindex $argv $i]
+    set timeout 60
+    expect "sftp>" { send "put $filename\r" }
+}
+
+expect "sftp>" { send "quit\r" }
+exit 0
+
