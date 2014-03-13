@@ -1,6 +1,6 @@
-SRC=main.c gpl.c pthread.c fib.c fibE.c mutex.c curses.c
-OBJ=main.o gpl.o fork.o pthread.o fib.o fibE.o mutex.o curses.o
-EXE=main fork pthread fib fibE mutex curses
+SRC=main.c gpl.c pthread.c fib.c fibE.c mutex.c curses-hello.c curses-getch.c
+OBJ=main.o gpl.o fork.o pthread.o fib.o fibE.o mutex.o curses-hello.o curses-getch.o
+EXE=main fork pthread fib fibE mutex curses-hello curses-getch
 
 all: $(EXE)
 
@@ -26,9 +26,14 @@ fib.o: fib.c
 
 fibE.o: fibE.c
 
-curses.o: curses.c
+curses-hello.o: curses-hello.c
 
-curses: curses.o
+curses-hello: curses-hello.o
+	$(CC) $(CFLAGS) -lncurses -o $@ $<
+
+curses-getch.o: curses-getch.c
+
+curses-getch: curses-getch.o
 	$(CC) $(CFLAGS) -lncurses -o $@ $<
 
 clean:
