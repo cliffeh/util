@@ -1,8 +1,12 @@
-SRC=main.c gpl.c pthread.c fib.c fibE.c mutex.c curses-hello.c curses-getch.c rand.c
-OBJ=main.o gpl.o fork.o pthread.o fib.o fibE.o mutex.o curses-hello.o curses-getch.o rand.o
-EXE=main fork pthread fib fibE mutex curses-hello curses-getch rand
+SRC=main.c gpl.c pthread.c fib.c fibE.c mutex.c curses-hello.c curses-getch.c rand.c getopt_long-example.c
+OBJ=main.o gpl.o fork.o pthread.o fib.o fibE.o mutex.o curses-hello.o curses-getch.o rand.o getopt_long-example.o
+EXE=main fork pthread fib fibE mutex curses-hello curses-getch rand getopt_long-example
 
 all: $(EXE)
+
+getopt_long-example: getopt_long-example.o
+
+getopt_long-example.o: getopt_long-example.c
 
 fork: fork.o
 
